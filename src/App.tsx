@@ -345,7 +345,7 @@ function Reveal({
   )
 }
 
-function SectionHead({ number, label }: { number: string label: string }) {
+function SectionHead({ number, label }: { number: string; label: string }) {
   return (
     <div className="section-head">
       <span>{number}</span>
@@ -503,7 +503,7 @@ function IPhoneFolkify({ compact = false }: { compact?: boolean }) {
 
 type ProjectTech = "docker" | "mysql" | "ubuntu" | "php" | "apache" | "letsencrypt" | "python" | "openvpn" | "opencv" | "gnubash" | "linux"
 
-function TechLogo({ name, label }: { name: ProjectTech label?: string }) {
+function TechLogo({ name, label }: { name: ProjectTech; label?: string }) {
   return (
     <span className={`tech-logo tech-logo-${name}`}>
       <img src={`/projects/tech/${name}.svg`} alt="" />
