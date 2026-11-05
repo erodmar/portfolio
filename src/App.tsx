@@ -1555,8 +1555,11 @@ export default function App() {
               <span>ER</span>
               <i />
             </div>
-            <h2>{t.easterTitle}</h2>
-            <p>{t.easterText}</p>
+            <h2>Transparencia & IA</h2>
+            <p>
+              Este portafolio ha sido diseñado y programado utilizando herramientas de Inteligencia Artificial 
+              como asistente de desarrollo, optimización de componentes React y refactorización de código.
+            </p>
             <a href="mailto:estebanrm2005@outlook.es">
               {t.easterCta}
               <Icon name="arrow" />
