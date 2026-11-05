@@ -506,7 +506,7 @@ type ProjectTech = "docker" | "mysql" | "ubuntu" | "php" | "apache" | "letsencry
 function TechLogo({ name, label }: { name: ProjectTech; label?: string }) {
   return (
     <span className={`tech-logo tech-logo-${name}`}>
-      <img src={`/projects/tech/${name}.svg`} alt="" />
+      <img src={`${import.meta.env.BASE_URL}projects/tech/${name}.svg`} alt="" />
       {label && <small>{label}</small>}
     </span>
   )
@@ -1335,7 +1335,7 @@ export default function App() {
                   <span>0{index + 1}</span>
                   <time>{item[lang === "es" ? 0 : 1]}</time>
                   <div className={`education-logo education-logo-${index}`}>
-                    <img src={item[5]} alt={`Logo ${item[4]}`} />
+                    <img src={`${import.meta.env.BASE_URL}${item[5].replace(/^\//, "")}`} alt={`Logo ${item[4]}`} />
                   </div>
                   <div className="education-copy">
                     <h3>{item[lang === "es" ? 2 : 3]}</h3>
