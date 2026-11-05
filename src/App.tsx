@@ -35,7 +35,7 @@ const iconPaths: Record<IconName, React.ReactNode> = {
   x: <path d="m6 6 12 12M18 6 6 18" />,
 }
 
-function Icon({ name, size = 20 }: { name: IconName size?: number }) {
+function Icon({ name, size = 20 }: { name: IconName; size?: number }) {
   return (
     <svg
       aria-hidden="true"
