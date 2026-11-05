@@ -1527,7 +1527,9 @@ export default function App() {
           </a>
         </div>
         <div className="footer-bottom wrap">
-          <span>{t.made} · © 2025</span>
+          <span>
+            {t.made} · {lang === "es" ? "Creado con ayuda de IA" : "Built with AI assistance"} · © 2026
+          </span>
           <button onClick={() => setModal(true)}>
             <kbd>H</kbd> {lang === "es" ? "una cosa más" : "one more thing"}
           </button>
@@ -1555,11 +1557,8 @@ export default function App() {
               <span>ER</span>
               <i />
             </div>
-            <h2>Transparencia & IA</h2>
-            <p>
-              Este portafolio ha sido diseñado y programado utilizando herramientas de Inteligencia Artificial 
-              como asistente de desarrollo, optimización de componentes React y refactorización de código.
-            </p>
+            <h2>{t.easterTitle}</h2>
+            <p>{t.easterText}</p>
             <a href="mailto:estebanrm2005@outlook.es">
               {t.easterCta}
               <Icon name="arrow" />
