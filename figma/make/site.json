@@ -1,0 +1,10 @@
+{
+  "description": "Explora la trayectoria, habilidades y formación de Esteban Rodríguez Martín, estudiante de informática y profesional de operaciones 24x7, y conecta con él.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
