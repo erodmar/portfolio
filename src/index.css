@@ -866,7 +866,7 @@ body::before { content: ''; position: fixed; z-index: -1; inset: 0; pointer-even
 .transition-case { --transition-a: #7a58ff; --transition-b: #ff6548; background: #030407; }
 
 /* The sphere sits beyond the right edge and dissolves before the crop */
-.hero::before { width: min(48vw, 700px); height: min(48vw, 700px); inset: 13% -13% auto auto; opacity: .86; mask-image: linear-gradient(90deg, #000 0%, #000 66%, transparent 98%); }
+.hero::before { width: min(42vw, 620px); height: min(42vw, 620px); inset: 13% 2% auto auto; opacity: .86; mask-image: none; }
 
 @keyframes navCurtain { 0% { opacity: 0; clip-path: inset(100% 0 0); } 20%, 67% { opacity: 1; clip-path: inset(0); } 100% { opacity: 0; clip-path: inset(0 0 100%); } }
 @keyframes transitionCopy { from { opacity: 0; transform: translateY(30px); filter: blur(8px); } 30%, 70% { opacity: 1; transform: none; filter: blur(0); } to { opacity: 0; transform: translateY(-18px); } }
@@ -875,7 +875,7 @@ body::before { content: ''; position: fixed; z-index: -1; inset: 0; pointer-even
 @media (max-width: 800px) {
   .product-stage { min-height: 880px; }
   .iphone-18 { width: 380px; height: 800px; }
-  .hero::before { width: 600px; height: 600px; top: 15%; right: -36%; }
+  .hero::before { width: 480px; height: 480px; top: 15%; right: 1%; }
 }
 
 @media (max-width: 560px) {
@@ -890,7 +890,7 @@ body::before { content: ''; position: fixed; z-index: -1; inset: 0; pointer-even
   .nav-transition h2 { padding-inline: 20px; font-size: 49px; }
   .nav-transition::before { width: 100vw; height: 100vw; top: -55vw; }
   .nav-transition::after { width: 90vw; height: 90vw; bottom: -55vw; }
-  .hero::before { width: 410px; height: 410px; top: 19%; right: -48%; }
+  .hero::before { width: 320px; height: 320px; top: 19%; right: 0; }
 }
 
 /* Official education marks, normalized to white */
