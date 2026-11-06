@@ -1253,3 +1253,51 @@ body::before { content: ''; position: fixed; z-index: -1; inset: 0; pointer-even
   .site { overflow-x: hidden !important; }
   .hero { width: 100% !important; overflow: hidden !important; border-radius: 0 !important; }
 }
+
+/* 1. Permitir que la esfera no se corte por el margen del Hero en PC */
+.hero {
+  overflow: visible !important;
+}
+
+/* 2. Posición exacta de la Foto 1 (sobre "frecuencia.") con la bola 100% redonda y nítida */
+.hero::before {
+  width: min(54vw, 730px) !important;
+  height: min(54vw, 730px) !important;
+  inset: 12% -6vw auto auto !important;
+  opacity: 1 !important;
+  filter: none !important;
+  mask-image: none !important;
+  -webkit-mask-image: none !important;
+  transform: none !important;
+}
+
+/* 3. Ajuste para tablets */
+@media (max-width: 800px) {
+  .hero {
+    overflow: hidden !important;
+  }
+  .hero::before {
+    width: 480px !important;
+    height: 480px !important;
+    top: 14% !important;
+    right: -18% !important;
+  }
+}
+
+/* 4. Ajuste para móvil: bola alineada con "frecuencia." sin tapar texto y sin franja blanca */
+@media (max-width: 560px) {
+  .site {
+    overflow-x: hidden !important;
+  }
+  .hero {
+    width: 100% !important;
+    overflow: hidden !important;
+    border-radius: 0 !important;
+  }
+  .hero::before {
+    width: 330px !important;
+    height: 330px !important;
+    top: 16% !important;
+    right: -16% !important;
+  }
+}
