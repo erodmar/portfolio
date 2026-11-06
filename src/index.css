@@ -1301,3 +1301,45 @@ body::before { content: ''; position: fixed; z-index: -1; inset: 0; pointer-even
     right: -16% !important;
   }
 }
+
+/* Posiciona la esfera más hacia la izquierda sobre la letra 'n' de "frecuencia." */
+.hero::before {
+  width: min(50vw, 680px) !important;
+  height: min(50vw, 680px) !important;
+  inset: 10% 6vw auto auto !important; /* Si quieres meterla aún más a la izquierda, aumenta este 6vw a 8vw o 10vw */
+  opacity: 1 !important;
+  filter: none !important;
+  mask-image: none !important;
+  -webkit-mask-image: none !important;
+  transform: none !important;
+}
+
+/* Mantener comportamiento en pantallas pequeñas */
+@media (max-width: 800px) {
+  .hero {
+    overflow: hidden !important;
+  }
+  .hero::before {
+    width: 480px !important;
+    height: 480px !important;
+    top: 14% !important;
+    right: -10% !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .site {
+    overflow-x: hidden !important;
+  }
+  .hero {
+    width: 100% !important;
+    overflow: hidden !important;
+    border-radius: 0 !important;
+  }
+  .hero::before {
+    width: 330px !important;
+    height: 330px !important;
+    top: 16% !important;
+    right: -12% !important;
+  }
+}
