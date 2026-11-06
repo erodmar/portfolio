@@ -1254,16 +1254,16 @@ body::before { content: ''; position: fixed; z-index: -1; inset: 0; pointer-even
   .hero { width: 100% !important; overflow: hidden !important; border-radius: 0 !important; }
 }
 
-/* 1. Permitir que la esfera no se corte por el margen del Hero en PC */
+/* 1. Permitir que la esfera no se corte plana en el borde derecho en PC */
 .hero {
   overflow: visible !important;
 }
 
-/* 2. Posición exacta de la Foto 1 (sobre "frecuencia.") con la bola 100% redonda y nítida */
+/* 2. Posición exacta en PC: empieza en la 'n' de "frecuencia.", bordes nítidos y bola redonda */
 .hero::before {
-  width: min(54vw, 730px) !important;
-  height: min(54vw, 730px) !important;
-  inset: 12% -6vw auto auto !important;
+  width: min(52vw, 700px) !important;
+  height: min(52vw, 700px) !important;
+  inset: 11% 1vw auto auto !important;
   opacity: 1 !important;
   filter: none !important;
   mask-image: none !important;
@@ -1271,50 +1271,7 @@ body::before { content: ''; position: fixed; z-index: -1; inset: 0; pointer-even
   transform: none !important;
 }
 
-/* 3. Ajuste para tablets */
-@media (max-width: 800px) {
-  .hero {
-    overflow: hidden !important;
-  }
-  .hero::before {
-    width: 480px !important;
-    height: 480px !important;
-    top: 14% !important;
-    right: -18% !important;
-  }
-}
-
-/* 4. Ajuste para móvil: bola alineada con "frecuencia." sin tapar texto y sin franja blanca */
-@media (max-width: 560px) {
-  .site {
-    overflow-x: hidden !important;
-  }
-  .hero {
-    width: 100% !important;
-    overflow: hidden !important;
-    border-radius: 0 !important;
-  }
-  .hero::before {
-    width: 330px !important;
-    height: 330px !important;
-    top: 16% !important;
-    right: -16% !important;
-  }
-}
-
-/* Posiciona la esfera más hacia la izquierda sobre la letra 'n' de "frecuencia." */
-.hero::before {
-  width: min(50vw, 680px) !important;
-  height: min(50vw, 680px) !important;
-  inset: 10% 6vw auto auto !important; /* Si quieres meterla aún más a la izquierda, aumenta este 6vw a 8vw o 10vw */
-  opacity: 1 !important;
-  filter: none !important;
-  mask-image: none !important;
-  -webkit-mask-image: none !important;
-  transform: none !important;
-}
-
-/* Mantener comportamiento en pantallas pequeñas */
+/* 3. Posición en Tablet */
 @media (max-width: 800px) {
   .hero {
     overflow: hidden !important;
@@ -1327,6 +1284,7 @@ body::before { content: ''; position: fixed; z-index: -1; inset: 0; pointer-even
   }
 }
 
+/* 4. Posición en Móvil: alineada tras "frecuencia." sin ocultar texto y sin franja blanca */
 @media (max-width: 560px) {
   .site {
     overflow-x: hidden !important;
@@ -1340,6 +1298,6 @@ body::before { content: ''; position: fixed; z-index: -1; inset: 0; pointer-even
     width: 330px !important;
     height: 330px !important;
     top: 16% !important;
-    right: -12% !important;
+    right: -14% !important;
   }
 }
